@@ -68,22 +68,33 @@ const Pet = () => {
     
 
     const updatePet = async (id, updatedPet) => {
+        const userId = 1; // Використовуємо userId з newPet
+    
+        const petWithUserId = {
+            ...updatedPet,
+            user: { id: userId } // Додаємо userId до даних тварини
+        };
+    
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:8080/pets/update/${id}`, updatedPet, {
+            const response = await axios.put(`http://localhost:8080/pets/update/${id}`, petWithUserId, {
                 headers: { Authorization: `Bearer ${token}` }
             });
+    
             setPets(prevPets =>
                 prevPets.map(pet =>
                     pet.id === id ? response.data : pet
                 )
             );
+    
             resetPetForm();
             setIsEditing(false);
         } catch (error) {
             console.error("Error updating pet", error);
         }
     };
+    
+    
 
     const adoptPet = async (petId) => {
         try {
@@ -98,7 +109,6 @@ const Pet = () => {
 
             console.log('Pet adopted successfully');
 
-            // Refresh the pet list
             const url = userRole === "ADMIN"
                 ? 'http://localhost:8080/pets'
                 : 'http://localhost:8080/pets/withoutAdopted';
@@ -181,7 +191,7 @@ const Pet = () => {
             adopted: false,
             url: '',
             dateBirth: '', 
-            user: { id: userId }
+            user: { id: 1 }
         });
     };
 
