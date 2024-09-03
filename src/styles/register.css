@@ -1,0 +1,66 @@
+/* Styles for the register container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Styles for the register form */
+  .register-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Styles for form labels */
+  .register-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  /* Styles for form inputs */
+  .register-form input[type="text"],
+  .register-form input[type="password"],
+  .register-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Styles for the submit button */
+  .register-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .register-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for feedback messages */
+  .register-form p {
+    font-size: 14px;
+  }
+  
+  .register-form .error {
+    color: red;
+  }
+  
+  .register-form .message {
+    color: green;
+  }
+  

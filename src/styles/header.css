@@ -1,0 +1,103 @@
+/* styles/header.css */
+
+.header {
+  background-color: #3498db; /* Основний фон заголовка */
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.header:hover {
+  background-color: #2980b9; /* Темніший відтінок на ховер */
+}
+
+.header-title {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  margin: 0;
+  font-size: 1.5rem;
+  flex-grow: 1; /* Додано для кращого розміщення заголовка */
+  text-align: left; /* Заголовок завжди вирівняний ліворуч */
+}
+
+.header-title:hover {
+  opacity: 0.8;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  margin-right: 1rem; /* Відступ між повідомленням і кнопками */
+  font-weight: bold; /* Зробити привітання трохи помітнішим */
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Додано плавний ефект */
+  margin-left: 0.5rem; /* Відступ між кнопками */
+}
+
+.btn-action {
+  background-color: #2ecc71; /* Зелений фон для кнопок дій */
+}
+
+.btn-action:hover {
+  background-color: #27ae60; /* Темніший зелений на ховер */
+}
+
+.btn-logout {
+  background-color: #e74c3c; /* Червоний фон для кнопки виходу */
+}
+
+.btn-logout:hover {
+  background-color: #c0392b; /* Темніший червоний на ховер */
+}
+
+.btn:active {
+  transform: scale(0.95); /* Ефект натискання на кнопку */
+}
+
+body {
+  padding-top: 60px; /* Відступ зверху, щоб не перекривати вміст */
+  margin: 0; /* Забезпечує, що немає небажаних відступів */
+  font-family: Arial, sans-serif; /* Основний шрифт для всього тіла */
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column; /* Вертикальне розміщення елементів на мобільних пристроях */
+      align-items: flex-start;
+      padding: 1rem; /* Збільшуємо відступи для мобільних пристроїв */
+  }
+
+  .header-title {
+      font-size: 1.25rem; /* Зменшуємо розмір заголовка для мобільних пристроїв */
+  }
+
+  .user-info {
+      margin-right: 0;
+      margin-bottom: 0.5rem; /* Додаємо відступ між користувачем і кнопками */
+  }
+
+  .btn {
+      margin-left: 0; /* Видаляємо відступи між кнопками на мобільних пристроях */
+      margin-bottom: 0.5rem; /* Додаємо відступ між кнопками */
+  }
+}
