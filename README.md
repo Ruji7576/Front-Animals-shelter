@@ -7,13 +7,13 @@ To get started with this application, follow these steps:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/Ruji7576/veterinary-1.git
+    git clone https://github.com/Ruji7576/Front-Animals-shelter.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd veterinary-1
+    cd Front-Animals-shelter
     ```
 
 3. **Install dependencies:**
@@ -34,7 +34,7 @@ To get started with this application, follow these steps:
 
 The main page provides an overview and access to various features of the application. It displays a summary of key functionalities. Below is a screenshot of the main page:
 
-- ![Main Page](URL_TO_MAIN_PAGE_SCREENSHOT)
+- ![Main Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/First-page.jpg?raw=true)
 
 ## Registration
 
@@ -46,7 +46,7 @@ The registration page allows new users to create an account. It includes fields 
 
 Below is a screenshot of the registration page:
 
-- ![Registration Page](URL_TO_REGISTRATION_PAGE_SCREENSHOT)
+- ![Registration Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/Register.jpg?raw=true)
 
 ## Login
 
@@ -57,7 +57,7 @@ The login page enables users to authenticate and access their accounts. It inclu
 
 Below is a screenshot of the login page:
 
-- ![Login Page](URL_TO_LOGIN_PAGE_SCREENSHOT)
+- ![Login Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/Login.jpg?raw=true)
 
 ## Admin Pages
 
@@ -72,7 +72,8 @@ In the admin interface, you can manage all pets, including:
 
 Below is a screenshot of the pet management page:
 
-- ![Pet Management Page](URL_TO_PET_MANAGEMENT_SCREENSHOT)
+- ![Pet Management Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/Admin-pets-1.1.jpg?raw=true)
+- ![Pet Management Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/Admin-pets-1.2.jpg?raw=true)
 
 ### Donation Management
 
@@ -85,7 +86,7 @@ Admins can manage donations with the following actions:
 
 Below is a screenshot of the donation management page:
 
-- ![Donation Management Page](URL_TO_DONATION_MANAGEMENT_SCREENSHOT)
+- ![Donation Management Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/Admin-donations.jpg?raw=true)
 
 ## User Pages
 
@@ -99,7 +100,8 @@ For regular users, the pet management page includes:
 
 Below is a screenshot of the pet management page for users:
 
-- ![User Pet Management Page](URL_TO_USER_PET_MANAGEMENT_SCREENSHOT)
+- ![User Pet Management Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/User-pets-1.1.jpg?raw=true)
+- ![User Pet Management Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/User-pets-1.2.jpg?raw=true)
 
 ### Donation Management
 
@@ -110,7 +112,7 @@ Users can:
 
 Below is a screenshot of the donation management page for users:
 
-- ![User Donation Management Page](URL_TO_USER_DONATION_MANAGEMENT_SCREENSHOT)
+- ![User Donation Management Page](https://github.com/Ruji7576/Front-Animals-shelter/blob/main/src/page-images/User-donations.jpg?raw=true)
 
 ## API Endpoints
 
@@ -118,7 +120,7 @@ Below is a screenshot of the donation management page for users:
 
 - **Login**
   - `POST http://localhost:8080/api/auth/login`
-  - Request body: 
+  - Request body:
     ```json
     { "username": "user", "password": "pass" }
     ```
@@ -134,10 +136,10 @@ Below is a screenshot of the donation management page for users:
 
 - **Get All Pets**
   - `GET http://localhost:8080/pets`
-
+  
 - **Get Pet by ID**
   - `GET http://localhost:8080/pets/{id}`
-
+  
 - **Get All Pets Without Adoption**
   - `GET http://localhost:8080/pets/withoutAdopted`
 
@@ -154,18 +156,24 @@ Below is a screenshot of the donation management page for users:
   - `PUT http://localhost:8080/pets/update/{id}`
   - Request body:
     ```json
-    { "name": "New Pet Name", ... }
+    { "petName": "New Pet Name", "age": "2 years", "breed": "Breed", "petType": "Type", "description": "Description", "Sterilized": false, "adopted": false, "url": "http://example.com/photo.jpg", "dateBirth": "2022-01-01T00:00:00" }
     ```
 
 - **Create a Pet**
   - `POST http://localhost:8080/pets/create`
   - Request body:
     ```json
-    { "name": "Pet Name", ... }
+    { "petName": "Pet Name", "age": "2 years", "breed": "Breed", "petType": "Type", "description": "Description", "Sterilized": false, "adopted": false, "url": "http://example.com/photo.jpg", "dateBirth": "2022-01-01T00:00:00" }
     ```
 
 - **Adopt a Pet**
-  - `POST http://localhost:8080/pets/adopt/{pet_id}?user_id={user_id}`
+  - `POST http://localhost:8080/pets/adopt/{pet_id}`
+  - Query parameters:
+    - `user_id`: ID of the user adopting the pet.
+  - Example:
+    ```
+    POST http://localhost:8080/pets/adopt/123?user_id=456
+    ```
 
 ### Donations
 
@@ -182,14 +190,14 @@ Below is a screenshot of the donation management page for users:
   - `PUT http://localhost:8080/donations/update/{id}`
   - Request body:
     ```json
-    { "amount": 100, ... }
+    { "name": "Donation Name", "donation": 100 }
     ```
 
 - **Create a Donation**
   - `POST http://localhost:8080/donations/create`
   - Request body:
     ```json
-    { "amount": 100, ... }
+    { "name": "Donation Name", "donation": 100 }
     ```
 
 - **Get All Donations by User**
@@ -200,6 +208,10 @@ Below is a screenshot of the donation management page for users:
 - **Get User Profile**
   - `GET http://localhost:8080/api/profile`
   - Returns details of the currently authenticated user.
+
+## Backend Repository
+
+The backend for this project is available at [Project-Animal-Shelter](https://github.com/Krisel1/Project-Animal-Shelter.git). You can use this backend to complement the functionality of this application.
 
 ## Technologies Used
 
