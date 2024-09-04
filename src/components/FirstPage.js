@@ -1,4 +1,3 @@
-// src/components/FirstPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import FirstPageList from './FirstPageList';

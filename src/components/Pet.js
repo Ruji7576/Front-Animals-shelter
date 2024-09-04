@@ -68,11 +68,11 @@ const Pet = () => {
     
 
     const updatePet = async (id, updatedPet) => {
-        const userId = 1; // Використовуємо userId з newPet
+        const userId = 1;
     
         const petWithUserId = {
             ...updatedPet,
-            user: { id: userId } // Додаємо userId до даних тварини
+            user: { id: userId } 
         };
     
         try {

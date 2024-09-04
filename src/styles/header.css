@@ -1,7 +1,5 @@
-/* styles/header.css */
-
 .header {
-  background-color: #3498db; /* Основний фон заголовка */
+  background-color: #3498db;
   color: white;
   padding: 0.5rem 1rem;
   display: flex;
@@ -17,7 +15,7 @@
 }
 
 .header:hover {
-  background-color: #2980b9; /* Темніший відтінок на ховер */
+  background-color: #2980b9; 
 }
 
 .header-title {
@@ -25,8 +23,8 @@
   transition: opacity 0.3s ease;
   margin: 0;
   font-size: 1.5rem;
-  flex-grow: 1; /* Додано для кращого розміщення заголовка */
-  text-align: left; /* Заголовок завжди вирівняний ліворуч */
+  flex-grow: 1; 
+  text-align: left; 
 }
 
 .header-title:hover {
@@ -39,8 +37,8 @@
 }
 
 .user-info {
-  margin-right: 1rem; /* Відступ між повідомленням і кнопками */
-  font-weight: bold; /* Зробити привітання трохи помітнішим */
+  margin-right: 1rem;
+  font-weight: bold;
 }
 
 .btn {
@@ -49,55 +47,54 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Додано плавний ефект */
-  margin-left: 0.5rem; /* Відступ між кнопками */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 0.5rem;
 }
 
 .btn-action {
-  background-color: #2ecc71; /* Зелений фон для кнопок дій */
+  background-color: #2ecc71; 
 }
 
 .btn-action:hover {
-  background-color: #27ae60; /* Темніший зелений на ховер */
+  background-color: #27ae60; 
 }
 
 .btn-logout {
-  background-color: #e74c3c; /* Червоний фон для кнопки виходу */
+  background-color: #e74c3c; 
 }
 
 .btn-logout:hover {
-  background-color: #c0392b; /* Темніший червоний на ховер */
+  background-color: #c0392b; 
 }
 
 .btn:active {
-  transform: scale(0.95); /* Ефект натискання на кнопку */
+  transform: scale(0.95);
 }
 
 body {
-  padding-top: 60px; /* Відступ зверху, щоб не перекривати вміст */
-  margin: 0; /* Забезпечує, що немає небажаних відступів */
-  font-family: Arial, sans-serif; /* Основний шрифт для всього тіла */
+  padding-top: 60px; 
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Медіа-запити для адаптивності */
 @media (max-width: 768px) {
   .header {
-      flex-direction: column; /* Вертикальне розміщення елементів на мобільних пристроях */
+      flex-direction: column; 
       align-items: flex-start;
-      padding: 1rem; /* Збільшуємо відступи для мобільних пристроїв */
+      padding: 1rem; 
   }
 
   .header-title {
-      font-size: 1.25rem; /* Зменшуємо розмір заголовка для мобільних пристроїв */
+      font-size: 1.25rem; 
   }
 
   .user-info {
       margin-right: 0;
-      margin-bottom: 0.5rem; /* Додаємо відступ між користувачем і кнопками */
+      margin-bottom: 0.5rem;
   }
 
   .btn {
-      margin-left: 0; /* Видаляємо відступи між кнопками на мобільних пристроях */
-      margin-bottom: 0.5rem; /* Додаємо відступ між кнопками */
+      margin-left: 0;
+      margin-bottom: 0.5rem;
   }
 }

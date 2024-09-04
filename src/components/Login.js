@@ -30,7 +30,7 @@ function Login() {
       const user = response.data;
       login(user);
       localStorage.setItem('user', JSON.stringify(user));
-      navigate(user.role === "ADMIN" ? '/pets' : '/donations');
+      navigate('/');
     } catch (error) {
       console.error('Error fetching user profile:', error);
       setError('Error fetching user profile');

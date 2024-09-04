@@ -1,4 +1,3 @@
-// src/components/DonationManager.js
 import React from 'react';
 import useDonation from '../hooks/useDonation';
 import DonationForm from './DonationForm';

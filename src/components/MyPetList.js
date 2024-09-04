@@ -1,7 +1,6 @@
-// src/components/MyPetList.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/myPetList.css'; // Import the CSS file for styling
+import '../styles/myPetList.css'; 
 
 const MyPetList = ({ userId, adoptPet }) => {
     const [pets, setPets] = useState([]);
@@ -9,7 +8,6 @@ const MyPetList = ({ userId, adoptPet }) => {
     useEffect(() => {
         const getAllMyPets = async () => {
             if (!userId) {
-                console.error("User ID is not available.");
                 return;
             }
 

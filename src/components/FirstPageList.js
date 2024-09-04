@@ -1,4 +1,3 @@
-// src/components/FirstPageList.js
 import React from 'react';
 import '../styles/firstPageList.css';
 

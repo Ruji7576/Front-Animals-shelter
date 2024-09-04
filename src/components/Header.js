@@ -16,7 +16,7 @@ const Header = ({ title }) => {
             <span className="user-info">Welcome, {user.username}!</span>
             <button className="btn btn-action" onClick={() => navigate('/donations')}>Donations</button>
             <button className="btn btn-action" onClick={() => navigate('/pets')}>Pets</button>
-            <button className="btn btn-logout" onClick={logout}>Logout</button>
+            <button className="btn btn-logout"  onClick={() => {logout(); navigate('/');}}>Logout</button>
           </>
         ) : (
           <>

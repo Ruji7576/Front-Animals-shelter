@@ -1,4 +1,3 @@
-/* Заголовок форми */
 .pet-list-title {
     font-size: 24px;
     font-weight: bold;
@@ -6,7 +5,6 @@
     text-align: center;
 }
 
-/* Контейнер форми */
 .pet-form {
     max-width: 600px;
     margin: 0 auto;
@@ -16,7 +14,6 @@
     background-color: #f9f9f9;
 }
 
-/* Поля вводу */
 .pet-form input,
 .pet-form textarea {
     width: 100%;
@@ -27,20 +24,17 @@
     box-sizing: border-box;
 }
 
-/* Поле textarea */
 .pet-form textarea {
     height: 100px;
     resize: vertical;
 }
 
-/* Мітки */
 .pet-form label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Стиль для кастомного чекбокса */
 .pet-form .checkbox-container {
     display: flex;
     align-items: center;
@@ -48,7 +42,7 @@
 }
 
 .pet-form .checkbox-container input[type="checkbox"] {
-    display: none; /* Сховати стандартний чекбокс */
+    display: none; 
 }
 
 .pet-form .checkbox-container .checkbox-label {
@@ -71,12 +65,12 @@
 }
 
 .pet-form .checkbox-container input[type="checkbox"]:checked + .checkbox-label::before {
-    background-color: #28a745; /* Зелений колір для активованого чекбокса */
+    background-color: #28a745; 
     border-color: #28a745;
 }
 
 .pet-form .checkbox-container input[type="checkbox"]:checked + .checkbox-label::after {
-    content: '✔'; /* Символ галочки */
+    content: '✔';
     color: white;
     font-size: 14px;
     position: absolute;
@@ -84,7 +78,6 @@
     top: 1px;
 }
 
-/* Кнопки */
 .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -111,12 +104,10 @@
     background-color: #dc3545;
 }
 
-/* Кнопка ховера */
 .btn:hover {
     opacity: 0.8;
 }
 
-/* Кнопка ховера для cancel */
 .btn-cancel:hover {
     opacity: 0.8;
 }

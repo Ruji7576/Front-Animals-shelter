@@ -1,6 +1,5 @@
-// src/components/PetList.js
 import React, { useEffect, useState } from 'react';
-import '../styles/petList.css'; // Import the updated CSS file
+import '../styles/petList.css'; 
 
 const PetList = ({ pets, deletePet, editPet, adoptPet }) => {
     const [userRole, setUserRole] = useState(null);
@@ -34,13 +33,17 @@ const PetList = ({ pets, deletePet, editPet, adoptPet }) => {
                             </div>
                             <div className="pet-details">
                                 <h2 className="pet-name">{pet.petName}</h2>
-                                <p><strong>Age:</strong> {pet.age}</p>
-                                <p><strong>Breed:</strong> {pet.breed}</p>
-                                <p><strong>Type:</strong> {pet.petType}</p>
-                                <p><strong>Description:</strong> {pet.description}</p>
-                                <p><strong>Sterilized:</strong> {pet.sterilized ? 'Yes' : 'No'}</p>
-                                <p><strong>Date of Birth:</strong> {pet.dateBirth ? new Date(pet.dateBirth).toLocaleDateString() : '-'}</p>
-                                <p><strong>Adopted:</strong> {pet.adopted ? 'Yes' : 'No'}</p>
+                                {[
+                                    { label: "Age", value: pet.age },
+                                    { label: "Breed", value: pet.breed },
+                                    { label: "Type", value: pet.petType },
+                                    { label: "Description", value: pet.description },
+                                    { label: "Sterilized", value: pet.sterilized ? 'Yes' : 'No' },
+                                    { label: "Date of Birth", value: pet.dateBirth ? new Date(pet.dateBirth).toLocaleDateString() : '-' },
+                                    { label: "Adopted", value: pet.adopted ? 'Yes' : 'No' }
+                                ].map(({ label, value }, index) => (
+                                    <p key={`${pet.id}-${label}`}><strong>{label}:</strong> {value}</p>
+                                ))}
                                 <div className="pet-actions">
                                     {userRole === 'ADMIN' ? (
                                         <>

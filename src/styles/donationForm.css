@@ -1,0 +1,44 @@
+.donation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .donation-form input,
+  .donation-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .donation-form input {
+    font-size: 16px;
+  }
+  
+  .donation-form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    transition: opacity 0.3s;
+  }
+  
+  .donation-form button:hover {
+    opacity: 0.8;
+  }
+  
+  .donation-form .btn-cancel {
+    background-color: #dc3545;
+  }
+  
+  .donation-form .btn-cancel:hover {
+    opacity: 0.8;
+  }
+  
